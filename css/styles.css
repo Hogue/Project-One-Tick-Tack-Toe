@@ -1,0 +1,102 @@
+body {
+  background: url("Faceoff-Movie-With-Nicolas-Cage.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.container {
+  height: 660px;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'tk-futura-pt-condensed';
+  font-size: 50px;
+  color: white;
+}
+
+table {
+  margin: 0px auto;
+  padding: 100px;
+  margin-bottom: 50px;
+}
+.box_cell {
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 75px;
+  opacity: .75;
+}
+
+.box_cell:hover {
+  background-color: #aaa;
+}
+
+#score_board {
+  height: 100px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+#text_winsX {
+  float: left;
+}
+
+#text_winsO {
+  float: left;
+}
+
+#winsForX {
+  height: 50px;
+  width: 100px;
+  margin: 0px 10px;
+  background-color: white;
+}
+
+#reset-score {
+  width: 80px;
+  height: 50px;
+}
+
+#winsForO {
+  height: 50px;
+  width: 100px;
+  margin: 0px 10px;
+  background-color: white;
+}
+
+.chat_box_wrapper {
+
+}
+
+#chat_box {
+  height: 120px;
+  width: 360px;
+  background-color: white;
+  border: 2px solid black;
+  padding: 0px 10px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#nameInput {
+ width: 80px;
+}
+
+#messageInput {
+  width: 250px;
+}
+
+
+
