@@ -23,7 +23,7 @@ $(document).ready(function() {
       $(event.currentTarget).text("x");
       board[rowIndex][columnIndex] = 'x';
       turnCount++;
-      var gameOver = checkForWinner();
+      var gameOver = checkForWinner() || tieGame();
       if(gameOver) {
         reSetBoard();
       }
@@ -33,7 +33,7 @@ $(document).ready(function() {
       $(event.currentTarget).text("o");
       board[rowIndex][columnIndex] = 'o';
       turnCount++;
-      var gameOver = checkForWinner();
+      var gameOver = checkForWinner() || tieGame();
       if(gameOver) {
         reSetBoard();
       }
@@ -91,13 +91,26 @@ function checkForWinner() {
     return false;
   }
 };
+
+function tieGame() {
+  debugger;
+  if (!checkForWinnerX() && !checkForWinnerO() && turnCount > 8 ) {
+    turnCount = 0;
+    alert("The Game Is A Draw");
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
 function reSetBoard() {
   board = [[null, null, null],
   [null, null, null],
   [null, null, null]];
 
 };
-$("#wins").on("click", function(){
+$("#reset-score").on("click", function(){
   winsX = 0;
   winsO = 0;
   $("#winsForX").html("");

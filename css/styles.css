@@ -27,9 +27,10 @@ table {
 .box_cell {
   width: 150px;
   height: 150px;
-  border: 2px solid white;
+  /*border: 2px solid white;*/
   border-radius: 75px;
   opacity: .75;
+  background-color: white;
 }
 
 .box_cell:hover {
