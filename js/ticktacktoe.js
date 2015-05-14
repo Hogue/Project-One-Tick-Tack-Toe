@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   $('.box_cell').on("click", function(event){
 
+    var gameOver;
     var rowIndexStr = this.dataset.row;
     var colIndexStr = this.dataset.col;
 
@@ -23,7 +24,7 @@ $(document).ready(function() {
       $(event.currentTarget).text("x");
       board[rowIndex][columnIndex] = 'x';
       turnCount++;
-      var gameOver = checkForWinner() || tieGame();
+      gameOver = checkForWinner() || tieGame();
       if(gameOver) {
         reSetBoard();
       }
@@ -33,7 +34,7 @@ $(document).ready(function() {
       $(event.currentTarget).text("o");
       board[rowIndex][columnIndex] = 'o';
       turnCount++;
-      var gameOver = checkForWinner() || tieGame();
+      gameOver = checkForWinner() || tieGame();
       if(gameOver) {
         reSetBoard();
       }
@@ -74,14 +75,12 @@ var checkForWinnerO = function() {
 
 function checkForWinner() {
   if (checkForWinnerX() === true) {
-    $(".box_cell").empty();
     turnCount = 0;
     alert("winner is X!");
     return true;
 
   }
   else if (checkForWinnerO() === true) {
-    $(".box_cell").empty();
     turnCount = 0;
     alert("winner is O!");
     return true;
@@ -93,7 +92,6 @@ function checkForWinner() {
 };
 
 function tieGame() {
-  debugger;
   if (!checkForWinnerX() && !checkForWinnerO() && turnCount > 8 ) {
     turnCount = 0;
     alert("The Game Is A Draw");
@@ -108,6 +106,7 @@ function reSetBoard() {
   board = [[null, null, null],
   [null, null, null],
   [null, null, null]];
+  $(".box_cell").empty();
 
 };
 $("#reset-score").on("click", function(){

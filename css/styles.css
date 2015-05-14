@@ -23,6 +23,8 @@ table {
   margin: 0px auto;
   padding: 100px;
   margin-bottom: 50px;
+  font-size: 80px;
+  text-align: center;
 }
 .box_cell {
   width: 150px;
@@ -31,6 +33,7 @@ table {
   border-radius: 75px;
   opacity: .75;
   background-color: white;
+
 }
 
 .box_cell:hover {
